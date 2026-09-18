@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    // Metro resolves bare imports like "./MapPicker" to MapPicker.native.tsx
+    // or MapPicker.web.tsx automatically at bundle time; tsc needs to be
+    // told the same suffix order explicitly, or it reports "Cannot find
+    // module" for any bare import that only has suffixed files. This repo
+    // is checked "as native" by default — see tsconfig.web.json for the
+    // web-flavored check (`npm run typecheck:web`).
+    "moduleSuffixes": [".ios", ".android", ".native", ""]
+  },
+  "exclude": [
+    "node_modules",
+    "supabase/functions"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Same project, but resolve bare imports to the .web.tsx variant first
+    // so files like MapPicker.web.tsx / PropertiesMapView.web.tsx actually
+    // get type-checked (the default tsconfig.json resolves natives first).
+    "moduleSuffixes": [".web", ""]
+  }
+}

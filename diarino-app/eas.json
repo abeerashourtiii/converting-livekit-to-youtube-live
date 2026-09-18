@@ -1,0 +1,52 @@
+{
+  "cli": {
+    "version": ">= 10.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "android": {
+        "gradleCommand": ":app:assembleDebug",
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://nwbtzchtwyhqktoerbap.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53YnR6Y2h0d3locWt0b2VyYmFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxNjkxMjAsImV4cCI6MjEwMTc0NTEyMH0.Ui_eElkCZP4BFrZRn-_Qh8FHAx0L4EnMRDpOCIDQo8c",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "TODO_WEB_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "ufz5snhv",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "diarino_uploads"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk",
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://nwbtzchtwyhqktoerbap.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53YnR6Y2h0d3locWt0b2VyYmFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxNjkxMjAsImV4cCI6MjEwMTc0NTEyMH0.Ui_eElkCZP4BFrZRn-_Qh8FHAx0L4EnMRDpOCIDQo8c",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "TODO_WEB_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "ufz5snhv",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "diarino_uploads"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "android": {
+        "image": "ubuntu-22.04-jdk-17-ndk-r26b"
+      },
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://nwbtzchtwyhqktoerbap.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53YnR6Y2h0d3locWt0b2VyYmFwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxNjkxMjAsImV4cCI6MjEwMTc0NTEyMH0.Ui_eElkCZP4BFrZRn-_Qh8FHAx0L4EnMRDpOCIDQo8c",
+        "EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID": "TODO_WEB_OAUTH_CLIENT_ID.apps.googleusercontent.com",
+        "EXPO_PUBLIC_CLOUDINARY_CLOUD_NAME": "ufz5snhv",
+        "EXPO_PUBLIC_CLOUDINARY_UPLOAD_PRESET": "diarino_uploads"
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+import { Property } from "../lib/types";
+
+// Ported 1:1 from `let properties = [...]` in app-viewer.html.
+// Note: in the original, every mock property has `media: []`, so the
+// reel feed's default mode is 'none' (gradient background + type icon),
+// not video/slideshow — real media only appears once a user publishes
+// through the create-listing flow. Kept identical here for parity.
+export const properties: Property[] = [
+  {
+    id: "p1", purpose: "sale", type: "شقة", title: "شقة فاخرة بتشطيب سوبر لوكس",
+    province: "الجيزة", location: "الشيخ زايد", lat: 30.0771, lng: 30.9700, price: 3200000, area: 180,
+    rooms: 3, baths: 2, reception: 2,
+    features: ["تشطيب سوبر لوكس", "جراج", "أمن وحراسة"],
+    description: "شقة مميزة في موقع متميز بالشيخ زايد، تشطيب سوبر لوكس بالكامل.",
+    likes: 128, saves: 34, views: 980, chats: 15,
+    createdAt: Date.now() - 1000 * 60 * 60 * 2,
+    media: [], coverImage: null, music: "Uplifting Corporate",
+    seller: { id: "s1", name: "أحمد المصري", initial: "أ", verified: true, listings: 12, followers: 340, bio: "وسيط عقاري معتمد", phone: "201001234567" },
+  },
+  {
+    id: "p2", purpose: "sale", type: "فيلا", title: "فيلا مستقلة بحديقة وحمام سباحة",
+    province: "القاهرة", location: "التجمع الخامس", lat: 30.0131, lng: 31.4290, price: 9500000, area: 400,
+    rooms: 5, baths: 4, reception: 3,
+    features: ["حديقة", "حمام سباحة", "جراج"],
+    description: "فيلا مستقلة على مساحة كبيرة، حديقة خاصة وحمام سباحة.",
+    likes: 256, saves: 61, views: 1540, chats: 42,
+    createdAt: Date.now() - 1000 * 60 * 60 * 5,
+    media: [], coverImage: null, music: "Chill Lounge",
+    seller: { id: "s2", name: "سارة عبد الله", initial: "س", verified: true, listings: 7, followers: 512, bio: "مكتب عقارات التجمع", phone: "201112345678" },
+  },
+  {
+    id: "p3", purpose: "rent", type: "شقة", title: "شقة حديثة للإيجار",
+    province: "الجيزة", location: "6 أكتوبر", lat: 29.9660, lng: 30.9232, price: 15000, area: 130,
+    rooms: 2, baths: 2, reception: 1,
+    features: ["مطبخ مجهز", "مصعد"],
+    description: "شقة حديثة بحالة ممتازة، مطبخ مجهز بالكامل.",
+    likes: 74, saves: 19, views: 602, chats: 8,
+    createdAt: Date.now() - 1000 * 60 * 60 * 10,
+    media: [], coverImage: null, music: "Acoustic Morning",
+    seller: { id: "s3", name: "محمد سامي", initial: "م", verified: false, listings: 4, followers: 88, bio: "إعلانات فردية", phone: "201212345678" },
+  },
+  {
+    id: "p4", purpose: "sale", type: "بنتهاوس", title: "بنتهاوس بتراس وفيو مفتوح",
+    province: "القاهرة", location: "مدينتي", lat: 30.0596, lng: 31.6410, price: 6200000, area: 240,
+    rooms: 4, baths: 3, reception: 2,
+    features: ["تراس", "تشطيب سوبر لوكس"],
+    description: "بنتهاوس بالدور الأخير، تراس كبير بإطلالة مفتوحة.",
+    likes: 180, saves: 45, views: 1100, chats: 28,
+    createdAt: Date.now() - 1000 * 60 * 60 * 15,
+    media: [], coverImage: null, music: "Oriental Vibes",
+    seller: { id: "s1", name: "أحمد المصري", initial: "أ", verified: true, listings: 12, followers: 340, bio: "وسيط عقاري", phone: "201001234567" },
+  },
+  {
+    id: "p5", purpose: "rent", type: "تجاري", title: "محل تجاري بواجهة مميزة",
+    province: "الجيزة", location: "الشيخ زايد", lat: 30.0800, lng: 30.9750, price: 35000, area: 80,
+    rooms: 0, baths: 1, reception: 0,
+    features: ["واجهة مميزة"],
+    description: "محل تجاري على الشارع الرئيسي، واجهة زجاجية كبيرة.",
+    likes: 51, saves: 12, views: 410, chats: 6,
+    createdAt: Date.now() - 1000 * 60 * 60 * 20,
+    media: [], coverImage: null, music: "Modern Beat",
+    seller: { id: "s4", name: "كريم فؤاد", initial: "ك", verified: true, listings: 9, followers: 201, bio: "عقارات تجارية", phone: "201501234567" },
+  },
+  {
+    id: "p6", purpose: "sale", type: "شقة", title: "شقة بحرية على البحر - قيد الإنشاء",
+    province: "مطروح", location: "الساحل الشمالي", lat: 31.0409, lng: 28.6461, price: 4500000, area: 110,
+    rooms: 2, baths: 2, reception: 1,
+    features: ["تشطيب سوبر لوكس", "عداد كهرباء", "عداد مياه"],
+    description: "شقة بفيو بحري مباشر في مارينا، قيد الإنشاء والتسليم 2027.",
+    likes: 312, saves: 88, views: 2100, chats: 55,
+    createdAt: Date.now() - 1000 * 60 * 60 * 25,
+    media: [], coverImage: null, music: "Uplifting Corporate",
+    seller: { id: "s2", name: "سارة عبد الله", initial: "س", verified: true, listings: 7, followers: 512, bio: "مكتب عقارات", phone: "201112345678" },
+  },
+];

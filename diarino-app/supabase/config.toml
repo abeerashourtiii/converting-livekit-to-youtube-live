@@ -1,0 +1,14 @@
+project_id = "hgwwmdhndczfqwdulird"
+# youtube-oauth-connect, youtube-create-broadcast, youtube-end-broadcast, and
+# send-push are called by the app itself with the signed-in user's Supabase
+# session — so they keep the default (JWT-verified) behavior.
+#
+# youtube-process-queue is different: it's invoked on a schedule (cron), not
+# by a signed-in user, so there is no Supabase session JWT to verify. It's
+# guarded instead by a shared secret header (x-cron-secret, checked against
+# the YOUTUBE_QUEUE_CRON_SECRET function secret) — see
+# docs/YOUTUBE_LIVE_MIGRATION_GUIDE.md §3 for how to set that secret and wire
+# up the actual schedule (Supabase Scheduled Functions or pg_cron, neither of
+# which can be configured from this repo alone).
+[functions.youtube-process-queue]
+verify_jwt = false

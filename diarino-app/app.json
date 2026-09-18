@@ -1,0 +1,183 @@
+{
+  "expo": {
+    "name": "Diarino",
+    "slug": "baranda-beruflich",
+    "scheme": "diarino",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "backgroundColor": "#B6BEAF",
+    "primaryColor": "#22A652",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "updates": {
+      "url": "https://u.expo.dev/8ffe0bd5-4c33-4f68-9101-78feca84d328",
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": "1.0.0",
+    "plugins": [
+      "expo-router",
+      "expo-updates",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#B6BEAF"
+        }
+      ],
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ],
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.123456789000-dummyid"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "يحتاج ديارينو للوصول إلى الكاميرا لبدء بث مباشر لعقارك.",
+          "microphonePermission": "يحتاج ديارينو للوصول إلى الميكروفون أثناء البث المباشر."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "يحتاج ديارينو للوصول لموقعك لعرض العقارات القريبة منك ضمن نطاق تختاره."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "يحتاج ديارينو للوصول إلى الصور لإرفاقها في المحادثات وعند نشر إعلانك.",
+          "cameraPermission": "يحتاج ديارينو للوصول إلى الكاميرا لالتقاط صور لعقارك."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#14293C"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0"
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ]
+    ],
+    "ios": {
+      "bundleIdentifier": "com.diarino.app",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "associatedDomains": [
+        "applinks:diarino.app"
+      ],
+      "infoPlist": {
+        "NSCameraUsageDescription": "يحتاج ديارينو للوصول إلى الكاميرا لبدء بث مباشر لعقارك.",
+        "NSMicrophoneUsageDescription": "يحتاج ديارينو للوصول إلى الميكروفون أثناء البث المباشر ولتسجيل الفيديوهات.",
+        "NSLocationWhenInUseUsageDescription": "يحتاج ديارينو للوصول لموقعك لعرض العقارات القريبة منك ضمن نطاق تختاره.",
+        "NSPhotoLibraryUsageDescription": "يحتاج ديارينو للوصول إلى مكتبة الصور لإرفاقها في المحادثات وعند نشر إعلانك.",
+        "NSPhotoLibraryAddUsageDescription": "يحتاج ديارينو إلى حفظ الصور والتسجيلات في البوم الصور.",
+        "UIBackgroundModes": [
+          "audio",
+          "voip",
+          "fetch"
+        ],
+        "LSApplicationQueriesSchemes": [
+          "whatsapp",
+          "fb-messenger",
+          "instagram",
+          "twitter",
+          "telegram",
+          "tiktok"
+        ],
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "diarino"
+            ]
+          }
+        ]
+      },
+      "bitcode": false
+    },
+    "android": {
+      "package": "com.diarino.app",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "diarino"
+            },
+            {
+              "scheme": "diarino",
+              "host": "auth-callback"
+            },
+            {
+              "scheme": "https",
+              "host": "diarino.app",
+              "pathPrefix": "/auth-callback"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#B6BEAF"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "32009702-2feb-4031-a338-94fe6cee4e12"
+      }
+    },
+    "owner": "m.elsarraf"
+  }
+}

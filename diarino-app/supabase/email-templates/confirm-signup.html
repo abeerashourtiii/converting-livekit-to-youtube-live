@@ -1,0 +1,43 @@
+<!--
+  supabase/email-templates/confirm-signup.html
+
+  NOT applied automatically by any migration — same as reset-password.html,
+  this goes in the Supabase Dashboard (Authentication → Email Templates →
+  "Confirm signup"), which lives outside this codebase.
+
+  Supabase's supported variables used below: {{ .ConfirmationURL }}
+-->
+<div dir="rtl" lang="ar" style="font-family: -apple-system, 'Segoe UI', Tahoma, Arial, sans-serif; background-color: #f3f4f6; padding: 32px 16px; margin: 0;">
+  <table role="presentation" width="100%" style="max-width: 420px; margin: 0 auto; background: #ffffff; border-radius: 16px; overflow: hidden;" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="background-color: #22A652; padding: 28px 24px; text-align: center;">
+        <div style="color: #ffffff; font-size: 20px; font-weight: 900;">ديار توك</div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 32px 28px;">
+        <h1 style="margin: 0 0 12px; font-size: 18px; font-weight: 900; color: #111827; text-align: center;">
+          أهلاً بيك في ديار توك 👋
+        </h1>
+        <p style="margin: 0 0 24px; font-size: 14px; line-height: 1.8; color: #4b5563; text-align: center;">
+          خطوة وحدة باقية عشان تفعّل حسابك وتبدأ تستكشف وتنشر عقاراتك.
+          اضغط على الزر أدناه لتأكيد بريدك الإلكتروني.
+        </p>
+        <div style="text-align: center; margin-bottom: 24px;">
+          <a href="{{ .ConfirmationURL }}"
+             style="display: inline-block; background-color: #22A652; color: #ffffff; text-decoration: none; font-weight: 900; font-size: 14px; padding: 14px 36px; border-radius: 999px;">
+            تأكيد البريد الإلكتروني
+          </a>
+        </div>
+        <p style="margin: 0; font-size: 12px; line-height: 1.7; color: #9ca3af; text-align: center;">
+          لو ماكنتش أنت اللي طلب إنشاء الحساب ده، تقدر تتجاهل الرسالة دي بأمان.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 18px 24px; background-color: #f9fafb; text-align: center;">
+        <span style="font-size: 11px; color: #9ca3af;">© ديار توك — منصة العقارات الأولى</span>
+      </td>
+    </tr>
+  </table>
+</div>
