@@ -75,7 +75,10 @@
             "kotlinVersion": "1.9.25",
             "compileSdkVersion": 35,
             "targetSdkVersion": 35,
-            "buildToolsVersion": "35.0.0"
+            "buildToolsVersion": "35.0.0",
+            "extraMavenRepos": [
+              "https://jitpack.io"
+            ]
           },
           "ios": {
             "deploymentTarget": "15.1"
