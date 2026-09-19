@@ -38,8 +38,7 @@
       [
         "@react-native-google-signin/google-signin",
         {
-          "iosUrlScheme": "com.googleusercontent.apps.123456789000-dummyid"
-        }
+"iosUrlScheme": "com.googleusercontent.apps.768047647528-fl8h6alht6i63ce3ekn4minh97savl4u"        }
       ],
       [
         "expo-camera",
@@ -58,7 +57,7 @@
         "expo-image-picker",
         {
           "photosPermission": "يحتاج ديارينو للوصول إلى الصور لإرفاقها في المحادثات وعند نشر إعلانك.",
-          "cameraPermission": "يحتاج ديارينو للوصول إلى الكاميرا لالتقاط صور لعقارك."
+          "": "يحتاج ديارينو للوصول إلى الكاميرا لالتقاط صور لعقارك."
         }
       ],
       [
